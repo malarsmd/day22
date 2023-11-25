@@ -1,0 +1,25 @@
+import React, { useState } from 'react';
+
+const PriceCard = () => {
+  const [price, setPrice] = useState(99.99); // You can set the initial price here
+
+  const handlePriceChange = (newPrice) => {
+    setPrice(newPrice);
+  };
+
+  return (
+    <div className="price-card">
+      <h2>Product Name</h2>
+      <p>Features:</p>
+      <ul>
+        <li>Feature 1</li>
+        <li>Feature 2</li>
+        {/* Add more features as needed */}
+      </ul>
+      <p>Price: ${price.toFixed(2)}</p>
+      <button onClick={() => handlePriceChange(89.99)}>Apply Discount</button>
+    </div>
+  );
+};
+
+export default PriceCard;
